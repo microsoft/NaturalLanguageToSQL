@@ -39,7 +39,12 @@ python .\NLToSql-Phi3_ServerlessDeployment.py (or) python .\NLToSql-phi3_local.p
 ```
 
 ### DB Schemas:
+Customer Table:
+
 CREATE TABLE [dbo].[Customers] ([CustomerID] INT NOT NULL, [CustomerName] VARCHAR(255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, [Email] VARCHAR(255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, CONSTRAINT PRIMARY KEY ([CustomerID] ASC)). 
+
+Orders Table:
+
 CREATE TABLE [dbo].[Orders] ([OrderID] INT NOT NULL, [CustomerID] INT NULL, [OrderDate] DATE NULL, [TotalAmount] DECIMAL(10,2) NULL, CONSTRAINT PRIMARY KEY ([OrderID] ASC))
 
 
